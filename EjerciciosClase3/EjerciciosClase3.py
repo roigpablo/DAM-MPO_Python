@@ -1,11 +1,11 @@
 #Tengo todos los ejercicios comentados para evitar duplicidades en las variables, y para no tener que estar ingresando todos los datos a cada vez que pruebo.
 #Para probar los ejercicios lo suyo sería ir descomentando, probando y comentando para que todo funcione bien. GRACIAAAAAS
-
-
+import math
+import random
 #1️⃣ Generador de nombres de usuario
 #Lo he puesto en inglés pa'hacerme el chulo, pero la primera vez y la úiltima jajajaja
 
-#import random
+
 #name = input("Write your name: ")
 #surname = input("Write your surname: ")
 #username = ((name + surname).lower())
@@ -48,20 +48,22 @@
 
 #5️⃣ Conversión de tipos y manipulación de listas
 
-#Pide al usuario una lista de números separados por comas.
-#Convierte cada número a entero.
-#Elimina los números repetidos.
-#Muestra la lista ordenada sin duplicados.
+#lista_numeros = input("Introduce una lista de números separados por comas: ")
+#print(lista_numeros)    #Se muestra pero como string, no como int.
+#lista_numeros_enteros = list(set(map(int, lista_numeros.split(","))))
+#print("La lista sin duplicados y ordenada es:", sorted(lista_numeros_enteros))
 
-lista_numeros = input("Introduce una lista de números separados por comas: ")
-print(lista_numeros)    #Se muestra pero como string, no como int.
-lista_numeros_enteros = list(set(map(int, lista_numeros.split(","))))
-print("La lista sin duplicados y ordenada es:", sorted(lista_numeros_enteros))
 
 #6️⃣ Creación de mensajes personalizados
 #Pide al usuario su nombre, edad y ciudad.
 #Muestra un mensaje con toda la información.
 #Si la edad es menor de 18, redondea hacia arriba hasta la mayoría de edad.
+nombre = input("Introduce tu nombre:")
+edad = int(input("Introduce tu edad:"))
+ciudad = input("En qué ciudad vives?:")
+#No entiendo a que se refiere con lo de redondea hasta la mayoria de edad.
+edad_redondeada = math.ceil(edad/18)*18
+print(f"Entonces, eres {nombre}, que vives en {ciudad} y tienes {edad} años. Edad mínima para ser mayor de edad: {edad_redondeada}")
 
 
 #7️⃣ Generador de contraseñas aleatorias
